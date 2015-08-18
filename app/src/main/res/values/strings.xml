@@ -1,6 +1,113 @@
 <resources>
-    <string name="app_name">DailyWorkOut</string>
+    <string name="app_name">Smart\nWorkOut</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="upperbody">
+        <item>One-Legged Push-Up</item>
+        <item>Push-Up</item>
+        <item>Diamond Push-Up</item>
+        <item>Asymmetrical Push-Up</item>
+        <item>Upper Body and Core: Uneven Push-Up</item>
+        <item>Upper Body and Core: Push-Up and Rotate</item>
+        <item>Plank Up and Down</item>
+        <item>Upper Body and Core: Lateral Plank Walk</item>
+        <item>Triceps Dip</item>
+        <item>Upper and Lower Body: Reverse Plank Bridge</item>
+        <item>Upper Body and Lower Body: Tabletop Lift</item>
+        <item> Superman</item>
+        <item>Superman Row</item>
+    </string-array>
+
+    <string-array name="lowerbody">
+        <item>Basic Squat</item>
+        <item>Sumo Squat</item>
+        <item>Lower Body and Core: Squat and Reach</item>
+        <item>Plié Squat</item>
+        <item>Wide Squat With Calf Raise</item>
+        <item> Narrow Squat With Back Kick</item>
+        <item>Basic Squat With Side Leg Lift</item>
+        <item>Good Morning</item>
+        <item>Lower Body and Core: Rotating Deadlift</item>
+        <item>Lunge</item>
+        <item>Alternating Side Lunge</item>
+        <item>Curtsy Lunge</item>
+        <item>Single-Leg Balance Touch</item>
+        <item>Leg Balance Warrior 3</item>
+        <item>Donkey Kick</item>
+        <item>Single-Leg Bridge Lift</item>
+        <item>Upper Body and Lower Body: Reverse Plank With Leg Lift</item>
+        <item>Wall Sit</item>
+    </string-array>
+
+    <string-array name="core">
+        <item>Bird Dog</item>
+        <item>Creepy Crawly Plank</item>
+        <item>Plank With Alternating Shoulder and Knee Tap</item>
+        <item>Mountain Climber</item>
+        <item>Elbow Plank With Donkey Kick</item>
+        <item>Plank With Side Step</item>
+        <item>Elbow Plank and Reach</item>
+        <item>Elbow Plank With Knee Drive</item>
+        <item>Twisting Side Plank</item>
+        <item>Side Elbow Plank With Leg Lift</item>
+        <item>Side-Plank Crunch</item>
+        <item>Seated Trunk Twist</item>
+        <item>Bicycle Crunch</item>
+        <item>Seated Russian Twist</item>
+        <item>Trunk Twist</item>
+        <item>V-Crunch</item>
+        <item>Runners Crunch</item>
+        <item>Half Banana</item>
+    </string-array>
+
+    <string-array name="polymetric">
+        <item>Cross Jacks</item>
+        <item>High Knees</item>
+        <item>High Knee Skips</item>
+        <item>Lateral Bunny Hop</item>
+        <item>Reverse Lunge and Hop</item>
+        <item>Jumping Lunge</item>
+        <item>Gate Swings</item>
+        <item>Side Skaters</item>
+        <item>Lateral Bounding</item>
+        <item>Jump Squat</item>
+        <item>Jump Squat With Heel Click</item>
+        <item>180 Jump Squat</item>
+        <item>Plank With Bunny Hop</item>
+        <item>Plank Jacks</item>
+        <item>Frogger</item>
+    </string-array>
+
+    <string-array name="seconds">
+        <item>10 Seconds</item>
+        <item>20 Seconds</item>
+        <item>30 Seconds</item>
+        <item>40 Seconds</item>
+        <item>50 Seconds</item>
+        <item>60 Seconds</item>
+    </string-array>
+    <string name="title_activity_set_alarm">SetAlarmActivity</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="title_activity_timer">TimerActivity</string>
+    <string name="title_activity_timer2">Timer2Activity</string>
+    <string name="title_activity_info">InfoActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <!--<string-array name="upperinfo">-->
+    <!--<item>-->
+    <!--Extend your left leg behind you so it's parallel with the floor. Engage your abs.<br/>-->
+    <!--With your leg extended, bend your elbows lowering your torso toward the floor while keeping your left heel in line with your left hip. Straighten your elbows to push yourself away from the floor.-->
+    <!--Repeat for a total of 15 push-ups; then lift your right leg for another 15 reps.-->
+    <!--</item>-->
+    <!--<item>-->
+    <!--Start in a plank position, with palms spread out evenly and your shoulders over your wrists and legs out behind you. Pull your belly button in, and keep your back straight.-->
+    <!--As you lower and exhale, bend your elbows outward to the sides. Hold at the bottom before you raise back up to complete one rep.-->
+    <!--</item>-->
+    <!--<item>-->
+    <!--Start in plank position with your hands under your shoulders and your body in one straight line.-->
+    <!--If your knees aren't on the floor, separate your feet so they're about shoulder-width apart to help you stay balanced throughout the exercise.-->
+    <!--Place your hands together, directly under your sternum, with the tips of your index fingers and thumbs touching. Your fingers and thumbs should form a diamond or triangle shape.-->
+    <!--Bend your elbows out to the sides, and lower your chest toward the floor. Then exhale to straighten your arms. This counts as one rep.-->
+    <!--</item>-->
+    <!--</string-array>-->
 </resources>

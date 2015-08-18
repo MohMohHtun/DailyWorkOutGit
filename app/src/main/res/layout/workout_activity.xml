@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:textColor="#FFa500"
+                    android:textSize="20dp"
+                    android:background="@drawable/image25"
+                    android:scaleType="fitXY"
+                    android:id="@+id/img" />
+
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
+                    android:text="LowerBody"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:background="#000000"
+                    android:alpha="0.5"
+                    android:textSize="20sp"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnStartWorkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/start_button"
+            android:text="Start Workout"
+            android:textColor="#ffffff" />
+
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/upper_recycler"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/btnStartWorkout"
+            android:layout_centerHorizontal="true"
+            android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</RelativeLayout>

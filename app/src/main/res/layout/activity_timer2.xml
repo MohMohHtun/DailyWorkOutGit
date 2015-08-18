@@ -1,0 +1,213 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mohmohhtun.dailyworkout.TimerActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:text="Set Only One Timer To Workout"
+            android:textColor="#0D47A1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/textTimer"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="10 Seconds"
+                    android:textAlignment="center"
+                    android:textColor="#0D47A1"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/timerToggle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/textTimer"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/textTimer2"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="20 Seconds"
+                    android:textAlignment="center"
+                    android:textColor="#0D47A1"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/timerToggle2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/textTimer2"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/textTimer3"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="30 Seconds"
+                    android:textAlignment="center"
+                    android:textColor="#0D47A1"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/timerToggle3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/textTimer3"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:textColor="@android:color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/textTimer4"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="40 Seconds"
+                    android:textAlignment="center"
+                    android:textColor="#0D47A1"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/timerToggle4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/textTimer4"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/textTimer5"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="50 Seconds"
+                    android:textAlignment="center"
+                    android:textColor="#0D47A1"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/timerToggle5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/textTimer5"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/textTimer6"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="60 Seconds"
+                    android:textAlignment="center"
+                    android:textColor="#0D47A1"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/timerToggle6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/textTimer6"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

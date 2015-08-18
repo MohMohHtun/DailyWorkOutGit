@@ -33,7 +33,7 @@ public class LowerInfoActivity extends ActionBarActivity {
     public void setDatatoimgList() {
 
         imgList[0] = R.drawable.lower1;
-        imgList[1] = R.drawable.lower2;
+        imgList[1] = R.drawable.lo2;
         imgList[2] = R.drawable.lower3;
         imgList[3] = R.drawable.lower4;
         imgList[4] = R.drawable.lower5;

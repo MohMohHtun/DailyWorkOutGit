@@ -4,5 +4,9 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
-
+    <!--<style name="MyTimePicker" parent="@android:style/Widget.Holo.TimePicker">-->
+    <!--<item name="android:divider">#673AB7</item>-->
+    <!--<item name="android:textColor">#673AB7</item>-->
+    <!--<item name="android:headerBackground">#673AB7</item>-->
+    <!--</style>-->
 </resources>

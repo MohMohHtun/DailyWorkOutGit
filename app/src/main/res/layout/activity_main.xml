@@ -1,51 +1,206 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--<LinearLayout -->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="match_parent"-->
-<!--android:orientation="vertical" >-->
+<?xml version="1.0" encoding="utf-8"?><!--<LinearLayout --><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:orientation="vertical" >-->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9">
+
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:src="@drawable/Core"/>
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:src="@drawable/Lower2"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/upperImage"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/body3"
+                        android:scaleType="fitXY"
+                        android:textColor="#FFa500"
+                        android:textSize="20dp"
+
+                        />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:alpha="0.5"
+                        android:background="#000000"
+                        android:gravity="center"
+                        android:text="UpperBody\nExercises"
+                        android:textColor="#ffffff"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/lowerImage"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:alpha="0.8"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/wallsit2" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:alpha="0.5"
+                        android:background="#000000"
+                        android:gravity="center"
+                        android:text="LowerBody\nExercises"
+                        android:textColor="#ffffff"
+                        android:textSize="25sp"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/coreImage"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:alpha="0.8"
+                        android:background="@drawable/body2"
+                        android:scaleType="fitXY"
+                        android:layout_centerInParent="true" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:alpha="0.5"
+                        android:background="#000000"
+                        android:gravity="center"
+                        android:text="Core\nExercises"
+                        android:textColor="#ffffff"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/polymetriceImage"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/jump2"
+                        android:text="polymetic" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:alpha="0.5"
+                        android:background="#000000"
+                        android:gravity="center"
+                        android:text="Polymetric\nExercises"
+                        android:textColor="#ffffff"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:alpha="0.5"
+            android:background="@drawable/circle"
+            android:text="Start"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:paddingTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#BBDEFB"
+        android:layout_weight="10">
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
             <Button
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:background="@drawable/Polymetric"
-                android:text="polymetic"
-                android:src="@drawable/Polymetric" />
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:src="@drawable/Upper2"/>
+                android:layout_gravity="center"
+                android:id="@+id/btnSetAlarm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/alarmp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <Button
+                android:id="@+id/btnsetTimer"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/timerp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <Button
+                android:id="@+id/btnAbout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/aboutp" />
         </LinearLayout>
     </LinearLayout>
+</LinearLayout>
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:alpha="0.5"
-        android:layout_centerInParent="true"
-        android:background="@drawable/circle"
-        android:src="@drawable/ic_launcher"/>
-</RelativeLayout>
 
-    <!--</LinearLayout>-->
+

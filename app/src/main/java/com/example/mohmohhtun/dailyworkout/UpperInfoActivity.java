@@ -30,7 +30,7 @@ public class UpperInfoActivity extends ActionBarActivity {
     public void setDatatoimgList() {
 
         imgList[0] = R.drawable.upper1;
-        imgList[1] = R.drawable.upper2;
+        imgList[1] = R.drawable.up2;
         imgList[2] = R.drawable.upper3;
         imgList[3] = R.drawable.upper4;
         imgList[4] = R.drawable.upper5;
