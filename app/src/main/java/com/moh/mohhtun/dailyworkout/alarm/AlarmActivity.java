@@ -1,4 +1,4 @@
-package com.example.mohmohhtun.dailyworkout;
+package com.moh.mohhtun.dailyworkout.alarm;
 
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -10,6 +10,9 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import com.moh.mohhtun.dailyworkout.R;
+
 import java.util.Calendar;
 
 

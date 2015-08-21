@@ -1,4 +1,4 @@
-package com.example.mohmohhtun.dailyworkout;
+package com.moh.mohhtun.dailyworkout.Polymetric;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.moh.mohhtun.dailyworkout.R;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,11 +22,11 @@ import java.util.List;
 /**
  * Created by mohmohhtun on 8/8/15.
  */
-public class CoreActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+public class PolymetricActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
 
     RecyclerView recyclerView;
-    public static List<String> CoreExerciseName = new ArrayList<String>();
-    public static CoreAdapter adapter;
+    public static List<String> PolymetricExerciseName = new ArrayList<String>();
+    public static PolymetricAdapter adapter;
     Button btnStart;
     TextView txtTitle;
     ImageView imageView;
@@ -34,23 +36,25 @@ public class CoreActivity extends ActionBarActivity implements AdapterView.OnIte
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.workout_activity);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         Resources resources = getResources();
-        String[] exerciseName = resources.getStringArray(R.array.core);
+        String[] exerciseName = resources.getStringArray(R.array.polymetric);
         List<String> exerciseNameList = new ArrayList<String>(Arrays.asList(exerciseName));
-        CoreExerciseName.clear();
+        PolymetricExerciseName.clear();
         for (String current : exerciseNameList) {
-            CoreExerciseName.add(current);
+            PolymetricExerciseName.add(current);
         }
         recyclerView = (RecyclerView) findViewById(R.id.upper_recycler);
         txtTitle = (TextView) findViewById(R.id.textTitle);
-        txtTitle.setText("Core");
+        txtTitle.setText("Polymetric");
         imageView = (ImageView) findViewById(R.id.img);
-        imageView.setImageResource(R.drawable.image39);
+        imageView.setImageResource(R.drawable.polymetric3);
         final LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(manager);
         recyclerView.setHasFixedSize(true);
-        adapter = new CoreAdapter(this, CoreExerciseName);
+        adapter = new PolymetricAdapter(this, PolymetricExerciseName);
         recyclerView.setAdapter(adapter);
         btnStart = (Button) findViewById(R.id.btnStartWorkout);
         Intent intent = getIntent();
@@ -58,7 +62,7 @@ public class CoreActivity extends ActionBarActivity implements AdapterView.OnIte
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CoreActivity.this, StartWorkOutCore.class);
+                Intent intent = new Intent(PolymetricActivity.this, StartWorkOutPolymetric.class);
                 intent.putExtra("timer", timer);
                 startActivity(intent);
             }

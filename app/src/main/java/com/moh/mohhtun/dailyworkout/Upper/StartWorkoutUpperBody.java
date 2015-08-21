@@ -1,4 +1,4 @@
-package com.example.mohmohhtun.dailyworkout;
+package com.moh.mohhtun.dailyworkout.Upper;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -6,20 +6,24 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.moh.mohhtun.dailyworkout.R;
+import com.moh.mohhtun.dailyworkout.WorkOut;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by mohmohhtun on 8/8/15.
+ * Created by mohmohhtun on 8/7/img15.
  */
-public class StartWorkOutPolymetric extends ActionBarActivity {
+public class StartWorkoutUpperBody extends ActionBarActivity {
     Button buttonStart;
     ProgressBar progressBar;
     TextView txtTimer;
@@ -34,7 +38,7 @@ public class StartWorkOutPolymetric extends ActionBarActivity {
     boolean status;
     long tempMillisec;
     int currentIndex;
-    int timer, timer1;
+    int timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +46,7 @@ public class StartWorkOutPolymetric extends ActionBarActivity {
         setContentView(R.layout.startworkout);
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-        imgList = new Integer[15];
+        imgList = new Integer[13];
         setDatatoimgList();
         initData();
         intent = getIntent();
@@ -54,9 +58,9 @@ public class StartWorkOutPolymetric extends ActionBarActivity {
         btnNext = (Button) findViewById(R.id.btnNext);
         txtTimer = (TextView) findViewById(R.id.txtTimer);
         prefs = getSharedPreferences("MOH", MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
         timer = intent.getIntExtra("timer", 0);
-        currentIndex = intent.getIntExtra("resumeIndexP", 0);
+        Log.i("Timerrrr", String.valueOf(timer));
+        currentIndex = intent.getIntExtra("resumeIndex", 0);
         txtTitle.setText(workOuts.get(currentIndex).getExerciseName() + System.getProperty("line.separator") + (currentIndex + 1) + "/" + imgList.length);
         imgUpperBody.setImageResource(workOuts.get(currentIndex).getImage());
         status = true;
@@ -65,33 +69,31 @@ public class StartWorkOutPolymetric extends ActionBarActivity {
     }
 
     public void setDatatoimgList() {
-        imgList[0] = R.drawable.img65;
-        imgList[1] = R.drawable.img66;
-        imgList[2] = R.drawable.img67;
-        imgList[3] = R.drawable.img68;
-        imgList[4] = R.drawable.img69;
-        imgList[5] = R.drawable.img70;
-        imgList[6] = R.drawable.img71;
-        imgList[7] = R.drawable.img72;
-        imgList[8] = R.drawable.img73;
-        imgList[9] = R.drawable.img74;
-        imgList[10] = R.drawable.img75;
-        imgList[11] = R.drawable.img76;
-        imgList[12] = R.drawable.img77;
-        imgList[13] = R.drawable.img78;
-        imgList[14] = R.drawable.img79;
+        imgList[0] = R.drawable.img1;
+        imgList[1] = R.drawable.img2;
+        imgList[2] = R.drawable.img3;
+        imgList[3] = R.drawable.img4;
+        imgList[4] = R.drawable.img5;
+        imgList[5] = R.drawable.img6;
+        imgList[6] = R.drawable.img7;
+        imgList[7] = R.drawable.img8;
+        imgList[8] = R.drawable.img9;
+        imgList[9] = R.drawable.img10;
+        imgList[10] = R.drawable.img11;
+        imgList[11] = R.drawable.img12;
+        imgList[12] = R.drawable.img13;
     }
 
     private void initData() {
         Resources resources = getResources();
-        String[] exerciseName = resources.getStringArray(R.array.polymetric);
-        for (int i = 0; i < 15; i++) {
+        String[] exerciseName = resources.getStringArray(R.array.upperbody);
+        for (int i = 0; i < 13; i++) {
             WorkOut workout = new WorkOut();
-            workout.setExerciseType("PolymetricExercise");
+            workout.setExerciseType("UpperBodyExercise");
             workout.setExerciseName(exerciseName[i]);
             workout.setImage(imgList[i]);
             workOuts.add(workout);
-            //workout.setInstruction();
+
         }
     }
 
@@ -120,7 +122,7 @@ public class StartWorkOutPolymetric extends ActionBarActivity {
             btnStartPause.setBackgroundResource(R.drawable.pausep);
             txtTimer.setText("Finished");
             progressBar.setProgress(timer);
-            if (currentIndex <= 14) {
+            if (currentIndex <= 12) {
                 createProgress();
                 txtTitle.setText(workOuts.get(currentIndex).getExerciseName() + System.getProperty("line.separator") + (currentIndex + 1) + "/" + imgList.length);
                 imgUpperBody.setImageResource(workOuts.get(currentIndex).getImage());
@@ -161,15 +163,14 @@ public class StartWorkOutPolymetric extends ActionBarActivity {
         btnInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StartWorkOutPolymetric.this, PolymetricInfoActivity.class);
-                intent.putExtra("info", currentIndex);
+                Intent intent = new Intent(StartWorkoutUpperBody.this,UpperInfoActivity.class);
+                intent.putExtra("info",currentIndex);
                 startActivity(intent);
             }
         });
-        if (currentIndex == 14) {
+        if (currentIndex == 12) {
 
             btnNext.setEnabled(false);
-
 
         } else {
             btnNext.setOnClickListener(new View.OnClickListener() {
@@ -190,9 +191,9 @@ public class StartWorkOutPolymetric extends ActionBarActivity {
         super.onPause();
         prefs = getSharedPreferences("MOH", MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        if (currentIndex < 15) {
-            editor.putInt("IndexForPoly", currentIndex);
-            editor.putString("Type", "poly");
+        if (currentIndex < 13) {
+            editor.putInt("Index", currentIndex);
+            editor.putString("Type", "upper");
             editor.commit();
         } else {
             currentIndex = 0;
@@ -202,4 +203,3 @@ public class StartWorkOutPolymetric extends ActionBarActivity {
         }
     }
 }
-

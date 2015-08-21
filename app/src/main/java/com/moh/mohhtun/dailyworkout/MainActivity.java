@@ -1,6 +1,5 @@
-package com.example.mohmohhtun.dailyworkout;
+package com.moh.mohhtun.dailyworkout;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
@@ -11,6 +10,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.moh.mohhtun.dailyworkout.Core.CoreActivity;
+import com.moh.mohhtun.dailyworkout.Lower.LowerBodyActivity;
+import com.moh.mohhtun.dailyworkout.Lower.StartWorkOutLowerBody;
+import com.moh.mohhtun.dailyworkout.Polymetric.PolymetricActivity;
+import com.moh.mohhtun.dailyworkout.Polymetric.StartWorkOutPolymetric;
+import com.moh.mohhtun.dailyworkout.Upper.StartWorkoutUpperBody;
+import com.moh.mohhtun.dailyworkout.Upper.UpperBodyActivity;
+import com.moh.mohhtun.dailyworkout.alarm.AlarmActivity;
+import com.moh.mohhtun.dailyworkout.timer.Timer2Activity;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -98,7 +107,7 @@ public class MainActivity extends ActionBarActivity {
                     i.putExtra("timer", timer);
                     startActivity(i);
                 } else if (type.equalsIgnoreCase("core")) {
-                    Intent i = new Intent(MainActivity.this, StartWorkOutCore.class);
+                    Intent i = new Intent(MainActivity.this, CoreActivity.StartWorkOutCore.class);
                     i.putExtra("resumeIndexC", lastIndexC);
                     i.putExtra("timer", timer);
                     startActivity(i);

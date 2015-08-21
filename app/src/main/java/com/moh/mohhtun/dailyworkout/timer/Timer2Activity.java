@@ -1,7 +1,8 @@
-package com.example.mohmohhtun.dailyworkout;
+package com.moh.mohhtun.dailyworkout.timer;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+
+import com.moh.mohhtun.dailyworkout.R;
 
 public class Timer2Activity extends ActionBarActivity {
 
@@ -22,6 +25,8 @@ public class Timer2Activity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer2);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         switch10 = (Switch) findViewById(R.id.timerToggle);
         switch20 = (Switch) findViewById(R.id.timerToggle2);
         switch30 = (Switch) findViewById(R.id.timerToggle3);

@@ -1,4 +1,4 @@
-package com.example.mohmohhtun.dailyworkout;
+package com.moh.mohhtun.dailyworkout;
 
 /**
  * Created by mohmohhtun on 8/9/15.

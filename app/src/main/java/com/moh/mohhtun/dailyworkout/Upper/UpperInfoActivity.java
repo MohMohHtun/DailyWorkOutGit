@@ -1,16 +1,15 @@
-package com.example.mohmohhtun.dailyworkout;
+package com.moh.mohhtun.dailyworkout.Upper;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
-/**
- * Created by mohmohhtun on 8/17/15.
- */
-public class LowerInfoActivity extends ActionBarActivity {
+import com.moh.mohhtun.dailyworkout.R;
+
+public class UpperInfoActivity extends ActionBarActivity {
 
     ImageView imageInfo;
     String[] info;
@@ -22,7 +21,7 @@ public class LowerInfoActivity extends ActionBarActivity {
         setContentView(R.layout.activity_info);
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-        imgList = new Integer[18];
+        imgList = new Integer[13];
         imageInfo = (ImageView) findViewById(R.id.infoImage);
         setDatatoimgList();
         Intent intent = getIntent();
@@ -32,24 +31,19 @@ public class LowerInfoActivity extends ActionBarActivity {
 
     public void setDatatoimgList() {
 
-        imgList[0] = R.drawable.lower1;
-        imgList[1] = R.drawable.lo2;
-        imgList[2] = R.drawable.lower3;
-        imgList[3] = R.drawable.lower4;
-        imgList[4] = R.drawable.lower5;
-        imgList[5] = R.drawable.lower6;
-        imgList[6] = R.drawable.lower7;
-        imgList[7] = R.drawable.lower8;
-        imgList[8] = R.drawable.lower9;
-        imgList[9] = R.drawable.lower10;
-        imgList[10] = R.drawable.lower11;
-        imgList[11] = R.drawable.lower12;
-        imgList[12] = R.drawable.lower13;
-        imgList[13] = R.drawable.lower14;
-        imgList[14] = R.drawable.lower15;
-        imgList[15] = R.drawable.lower16;
-        imgList[16] = R.drawable.lower17;
-        imgList[17] = R.drawable.lower18;
+        imgList[0] = R.drawable.upper1;
+        imgList[1] = R.drawable.up2;
+        imgList[2] = R.drawable.upper3;
+        imgList[3] = R.drawable.upper4;
+        imgList[4] = R.drawable.upper5;
+        imgList[5] = R.drawable.upper6;
+        imgList[6] = R.drawable.upper7;
+        imgList[7] = R.drawable.upper8;
+        imgList[8] = R.drawable.upper9;
+        imgList[9] = R.drawable.upper10;
+        imgList[10] = R.drawable.upper11;
+        imgList[11] = R.drawable.upper12;
+        imgList[12] = R.drawable.upper13;
     }
 
     @Override
@@ -74,4 +68,3 @@ public class LowerInfoActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
-

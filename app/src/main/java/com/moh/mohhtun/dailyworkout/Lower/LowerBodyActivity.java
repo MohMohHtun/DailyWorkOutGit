@@ -1,7 +1,8 @@
-package com.example.mohmohhtun.dailyworkout;
+package com.moh.mohhtun.dailyworkout.Lower;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,18 +13,20 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.moh.mohhtun.dailyworkout.R;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by mohmohhtun on 8/7/img15.
+ * Created by mohmohhtun on 8/8/img15.
  */
-public class UpperBodyActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+public class LowerBodyActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
 
     RecyclerView recyclerView;
-    public static List<String> upperBodyExerciseName = new ArrayList<String>();
-    public static UpperBodyAdapter adapter;
+    public static List<String> lowerBodyExerciseName = new ArrayList<String>();
+    public static LowerBodyAdapter adapter;
     Button btnStart;
     TextView txtTitle;
     ImageView imageView;
@@ -36,22 +39,22 @@ public class UpperBodyActivity extends ActionBarActivity implements AdapterView.
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         Resources resources = getResources();
-        String[] exerciseName = resources.getStringArray(R.array.upperbody);
+        String[] exerciseName = resources.getStringArray(R.array.lowerbody);
         List<String> exerciseNameList = new ArrayList<String>(Arrays.asList(exerciseName));
-        upperBodyExerciseName.clear();
+        lowerBodyExerciseName.clear();
         for (String current : exerciseNameList) {
-            upperBodyExerciseName.add(current);
+            lowerBodyExerciseName.add(current);
         }
         recyclerView = (RecyclerView) findViewById(R.id.upper_recycler);
         txtTitle = (TextView) findViewById(R.id.textTitle);
-        txtTitle.setText("UpperBody");
+        txtTitle.setText("LowerBody");
         imageView = (ImageView) findViewById(R.id.img);
-        imageView.setImageResource(R.drawable.image8);
+        imageView.setImageResource(R.drawable.image25);
         final LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(manager);
         recyclerView.setHasFixedSize(true);
-        adapter = new UpperBodyAdapter(this, upperBodyExerciseName);
+        adapter = new LowerBodyAdapter(this, lowerBodyExerciseName);
         recyclerView.setAdapter(adapter);
         btnStart = (Button) findViewById(R.id.btnStartWorkout);
         Intent intent = getIntent();
@@ -59,7 +62,7 @@ public class UpperBodyActivity extends ActionBarActivity implements AdapterView.
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UpperBodyActivity.this, StartWorkoutUpperBody.class);
+                Intent intent = new Intent(LowerBodyActivity.this, StartWorkOutLowerBody.class);
                 intent.putExtra("timer", timer);
                 startActivity(intent);
             }
@@ -70,5 +73,12 @@ public class UpperBodyActivity extends ActionBarActivity implements AdapterView.
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        ImageView imageView = (ImageView) findViewById(R.id.img);
+        imageView.setBackgroundColor(Color.rgb(255, 255, 255));
     }
 }

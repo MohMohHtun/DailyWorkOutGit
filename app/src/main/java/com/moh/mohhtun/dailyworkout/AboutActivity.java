@@ -1,4 +1,4 @@
-package com.example.mohmohhtun.dailyworkout;
+package com.moh.mohhtun.dailyworkout;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;

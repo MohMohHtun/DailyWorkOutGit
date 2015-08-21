@@ -1,4 +1,4 @@
-package com.example.mohmohhtun.dailyworkout;
+package com.moh.mohhtun.dailyworkout.Core;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,10 +7,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
+import com.moh.mohhtun.dailyworkout.R;
+
 /**
  * Created by mohmohhtun on 8/17/15.
  */
-public class PolymetricInfoActivity extends ActionBarActivity {
+public class CoreInfoActivity extends ActionBarActivity {
 
     ImageView imageInfo;
     String[] info;
@@ -22,7 +24,7 @@ public class PolymetricInfoActivity extends ActionBarActivity {
         setContentView(R.layout.activity_info);
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-        imgList = new Integer[15];
+        imgList = new Integer[18];
         imageInfo = (ImageView) findViewById(R.id.infoImage);
         setDatatoimgList();
         Intent intent = getIntent();
@@ -32,22 +34,24 @@ public class PolymetricInfoActivity extends ActionBarActivity {
 
     public void setDatatoimgList() {
 
-        imgList[0] = R.drawable.poly1;
-        imgList[1] = R.drawable.poly2;
-        imgList[2] = R.drawable.poly3;
-        imgList[3] = R.drawable.poly4;
-        imgList[4] = R.drawable.poly5;
-        imgList[5] = R.drawable.poly6;
-        imgList[6] = R.drawable.poly7;
-        imgList[7] = R.drawable.poly8;
-        imgList[8] = R.drawable.poly9;
-        imgList[9] = R.drawable.poly10;
-        imgList[10] = R.drawable.poly11;
-        imgList[11] = R.drawable.poly12;
-        imgList[12] = R.drawable.poly13;
-        imgList[13] = R.drawable.poly14;
-        imgList[14] = R.drawable.poly15;
-
+        imgList[0] = R.drawable.core1;
+        imgList[1] = R.drawable.core2;
+        imgList[2] = R.drawable.core3;
+        imgList[3] = R.drawable.core4;
+        imgList[4] = R.drawable.core5;
+        imgList[5] = R.drawable.core6;
+        imgList[6] = R.drawable.core7;
+        imgList[7] = R.drawable.core8;
+        imgList[8] = R.drawable.core9;
+        imgList[9] = R.drawable.core10;
+        imgList[10] = R.drawable.core11;
+        imgList[11] = R.drawable.core12;
+        imgList[12] = R.drawable.core13;
+        imgList[13] = R.drawable.core14;
+        imgList[14] = R.drawable.core15;
+        imgList[15] = R.drawable.core16;
+        imgList[16] = R.drawable.core17;
+        imgList[17] = R.drawable.core18;
     }
 
     @Override

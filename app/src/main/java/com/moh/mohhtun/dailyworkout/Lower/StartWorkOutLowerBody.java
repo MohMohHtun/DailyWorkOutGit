@@ -1,4 +1,4 @@
-package com.example.mohmohhtun.dailyworkout;
+package com.moh.mohhtun.dailyworkout.Lower;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.moh.mohhtun.dailyworkout.R;
+import com.moh.mohhtun.dailyworkout.WorkOut;
 
 import java.util.ArrayList;
 import java.util.List;
